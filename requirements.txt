@@ -1,0 +1,6 @@
+transformers[torch]
+protobuf==3.20.*
+transformers
+datasets
+scikit-learn
+emoji
