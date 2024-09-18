@@ -12,7 +12,7 @@ for i in range(1,4):
 
     # Reading the data
     print("Loading data..")
-    df_train = pd.read_csv(f"dataset{i}_train.csv")
+    df_train = pd.read_csv(f"datasets/dataset{i}_train.csv")
     train_dataset = Dataset.from_pandas(df_train, preserve_index = False)
     tokenized_train_dataset = train_dataset.map(lambda x: tokenizer(x["text"], padding="max_length", max_length=128, truncation=True), batched=True)
 
