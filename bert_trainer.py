@@ -19,9 +19,8 @@ for i in range(1,4):
     # Creating HF Trainer
     training_args = TrainingArguments(
         output_dir=f"savings/bert-savings-dataset{i}", 
-        evaluation_strategy="epoch",
-        per_device_train_batch_size=8,
-        per_device_eval_batch_size=8)
+        evaluation_strategy="no",
+        per_device_train_batch_size=32)
 
     trainer = Trainer(
         model=model,
